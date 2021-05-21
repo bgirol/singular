@@ -15,5 +15,5 @@ $$ 	\begin{align*}
 			\end{align*}  $$
 			
 	
-And a test for inine mathe $z^2 = x^2 + y^2$
+And a test for inline math $z^2 = x^2 + y^2$
 
