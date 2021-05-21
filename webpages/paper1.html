@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+{% seo %}
+  </head>
+
+  <body>
+     <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
+>
+</script>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          {% if site.github.is_project_page %}
+            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
+          {% endif %}
+
+          <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
+          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+
+          {% if site.show_downloads %}
+            <section id="downloads">
+              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
+            </section>
+          {% endif %}
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        {{ content }}
+        $$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}   $$
+
+$$ 	\begin{align*}
+			\dot{u}_1(t) =& \dot{x}(t) = u_2(t)\\
+					\dot{u}_2(t) =& \ddot{x}(t) = u_3(t)\\
+						&\vdots\\
+									\dot{u}_n(t) =& x^{(n)}(t) = f(t, x(t), \dot{x}, \dots, x^{(n-1)}) = f(t, u_1(t), u_2(t), \dots, u_n(t)),
+			\end{align*}  $$
+			
+	
+And a test for inline math $z^2 = x^2 + y^2$
+
+        <video src="videos/gracia_2018.mp4" controls>
+            Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+  Dieser Film zeigt eine Demonstration des video-Elements. 
+  Sie können ihn unter <a href="#">Link-Addresse</a> abrufen.
+</video>
+          <img src="images/rates.png" alt="rates">
+          $$ \alpha       $$ 
+          Valuable informations concerning  the Experimental estimation of errors can be found in \cite[Chapter~8, p.~157]{Farrell.2000}. It is a known fact, that numerical methods for computing approximate solutions of partial differential equations are usually applied to problems with unknown exact solution. Now, $ u $ shall be the exact solution of any given problem, $ U^N  $ shall be a numerical approximation on the mesh $ \Omega^N $, $ N $ being the number of mesh points in each coordinate direction of the discrete problem associated with the numerical
+method. The canonic criterion for judging the quality of a numerical method for solving problems in the case of non-singularly perturbed
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        {% if site.github.is_project_page %}
+        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    {% if site.google_analytics %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+  </body>
+</html>
+
+
+
