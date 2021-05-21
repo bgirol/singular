@@ -41,5 +41,5 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 
 
-$$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$
+$$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}  latex \alpha is being tested$$
 
