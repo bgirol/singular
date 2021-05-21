@@ -1,3 +1,6 @@
+$$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/bgirol/singular/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
