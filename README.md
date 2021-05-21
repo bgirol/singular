@@ -13,4 +13,7 @@ $$ 	\begin{align*}
 						&\vdots\\
 									\dot{u}_n(t) =& x^{(n)}(t) = f(t, x(t), \dot{x}, \dots, x^{(n-1)}) = f(t, u_1(t), u_2(t), \dots, u_n(t)),
 			\end{align*}  $$
+			
+	
+And a test for inine mathe $z^2 = x^2 + y^2$
 
