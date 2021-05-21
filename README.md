@@ -1,5 +1,5 @@
 
-<h1> Notes on singularly perturbed problems </h1>
+## Notes on singularly perturbed problems 
 
 
 
