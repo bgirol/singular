@@ -33,11 +33,11 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bgirol/singular/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+ $$ \alpha       $$ 
+          Valuable informations concerning  the Experimental estimation of errors can be found in \cite[Chapter~8, p.~157]{Farrell.2000}. It is a known fact, that numerical methods for computing approximate solutions of partial differential equations are usually applied to problems with unknown exact solution. Now, $ u $ shall be the exact solution of any given problem, $ U^N  $ shall be a numerical approximation on the mesh $ \Omega^N $, $ N $ being the number of mesh points in each coordinate direction of the discrete problem associated with the numerical
+method. The canonic criterion for judging the quality of a numerical method for solving problems in the case of non-singularly perturbed
+      <p>Results from various: <a href="webpages/paper2.html">Papers</a></p>
+            <p>Results from various: <a href="webpages/paper2-protected.html">Papers</a></p>
 
 
 
