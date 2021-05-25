@@ -33,7 +33,8 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ### Jekyll Themes
 
- [index](/webpages/paper2.html)
+ [paper2](/webpages/paper2.html)
 
+ [index](/webpages/index.html)
 
 
