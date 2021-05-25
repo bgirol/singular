@@ -35,6 +35,6 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
  [paper2](/webpages/paper2.html)
 
- [index](/webpages/index.html)
+ [index](index.html)
 
 
