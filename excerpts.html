@@ -32,14 +32,21 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 5px;
 }
 </style>
+
 <body>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
+<script type="text/javascript">
+  window.MathJax = {
+    config: ["MMLorHTML.js"],
+    jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+    extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+    },
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
     }
-  });
+  };
 </script>
 <script
   type="text/javascript"
@@ -64,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
   </div>
 </div>
-
+\newcommand{\N}{\mathbb{N}}
 
 
 <!-- Page content -->
@@ -76,18 +83,13 @@ h1, h2, h3, h4, h5, h6 {
  <div class="w3-col m6 w3-padding-large">
       <h1 class="w3-center">Title</h1><br>
       <h5 class="w3-center">Description</h5>
-      <p class="w3-large">         Content
+      <p class="w3-large">         \[  \alpha \N \]
   </p>
       </div>
     
     
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">Title</h1><br>
-      <h5 class="w3-center">Description</h5>
-      <p class="w3-large">           CONTENT
-  </p>
-      </div>
-    
+   
+
   </div>
   
  
