@@ -20,7 +20,9 @@
 }
 	
 	</style>
+
 		</head>
+
 <title>Notes</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,6 +36,24 @@ h1, h2, h3, h4, h5, h6 {
 </style>
 
 <body>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
+>
+</script>
 <script type="text/javascript">
   window.MathJax = {
     config: ["MMLorHTML.js"],
@@ -48,18 +68,55 @@ h1, h2, h3, h4, h5, h6 {
     }
   };
 </script>
-<script
-  type="text/javascript"
-  charset="utf-8"
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
->
-</script>
-<script
-  type="text/javascript"
-  charset="utf-8"
-  src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
->
-</script>
+
+
+$\renewcommand{\bottomfraction}{0.9}
+\renewcommand{\topfraction}{0.9}
+\newcommand{\pt}{\partial}
+\newcommand{\laplace}{\Delta}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RR}{\mathbb{R}}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\rho}{\varrho}
+\renewcommand{\theta}{\vartheta}
+\newcommand{\scal}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\m}[1]{\mathcal{#1}}
+\newcommand{\mF}{\mathcal{F}}
+\newcommand{\mL}{\mathcal{L}}
+\DeclareMathOperator{\ess}{ess}
+\DeclareMathOperator{\erf}{erf}
+\newcommand{\en}[1]{\left|\hspace{-0.09em}\left|\hspace{-0.09em}\left|#1%
+	\right|\hspace{-0.09em}\right|\hspace{-0.09em}\right|}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathrm{e}}
+\newcommand{\D}{\mathrm{  d}}
+\newcommand{\Ord}[1]{\mathcal{O}\left(#1\right)}
+\newcommand{\grad}{\nabla}
+\newcommand{\sG}{\bar{\iG}}
+\newcommand{\bG}{\hat{\iG}}
+\newcommand{\balpha}{\boldsymbol\alpha}
+\newcommand{\bb}{\boldsymbol b}
+\newcommand{\bbeta}{\boldsymbol\beta}
+\newcommand{\bLambda}{\boldsymbol{\Lambda}}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\dintijk}[1]{\left.{\int_{x_{i-1}}^{x_i}\int_{y_{j-1}}^{y_j}\int_{z_{k-1}}^{z_k}}#1\right.{d\mu d\eta d\xi }}
+\newcommand{\te}[1]{\text{ #1 }}
+\newcommand{\fr}[2]{\frac{#1}{#2} }
+\newcommand{\li}[3]{\lim\limits_{#1 \rightarrow #2} #3} 
+\newcommand{\su}[3]{\sum\limits_{#1}^#2 #3}
+\newcommand{\p}{\partial} 
+\DeclareMathOperator\erfc{erfc}
+$
+
+  
+    
+
+  
+
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
@@ -71,7 +128,6 @@ h1, h2, h3, h4, h5, h6 {
     </div>
   </div>
 </div>
-\newcommand{\N}{\mathbb{N}}
 
 
 <!-- Page content -->
@@ -83,12 +139,86 @@ h1, h2, h3, h4, h5, h6 {
  <div class="w3-col m6 w3-padding-large">
       <h1 class="w3-center">Title</h1><br>
       <h5 class="w3-center">Description</h5>
-      <p class="w3-large">         \[  \alpha \N \]
-  </p>
+      <p class="w3-large">     
+
+
+\section{Problem Class}
+Gracia and O'Riordan consider numerical approximations to the solution of a linear singularly perturbed parabolic reaction-diffusion problem with incompatible boundary-initial data.
+	It is well-known, that the solutions of these problems typically exhibit boundary layers, initial layers and 	initial-boundary layers.      
+They consider the following  singularly perturbed parabolic problem: one seeks for $ Q := (0,1) \times (0,T] $ a solution $ u : \overline{Q} \rightarrow \R $ that satisfies for $  0 < x < 1 $
+\begin{align} \label{parabolic}
+	L u := \epsilon (u_t - u_{xx}) + b(x,t) u = f(x,t),  (x,t) \in Q \\
+	u(0,t) = g_L(t), u(1,t) = g_R(t), t \geq 0, u(x,0) = \Phi(x)  \\
+	\Phi(0^+)  \neq g_L(0), \Phi(1^-) = g_R(0) \\
+	b_x(0,0)  = 0 \text{ and }b(x,t) > \beta > 0, \forall t \geq 0\\
+	f, b \in C^{4 + \gamma}(\overline{Q}), g_L, g_R \in C^2([0,T]), \Phi \in C^4([0,1]).	
+\end{align}
+
+\section{Singularities}
+The solution is discontinuous at the corner $ (0,0) $ of the domain $ \overline{Q} $ due to the inconsistency of the initial- and boundary condition $ 	\Phi(0^+)  \neq g_L(0) $.  Due to this singularity, the solution is decomposed in a sum of terms: some are linked to the layers in the solution and others are  associated with the lack of compatibility being assumed at $  (0, 0). $ For this purpose, the solution of \eqref{parabolic} is decomposed into the sum
+\begin{equation} \label{eq:z0}
+	u = A_0 e^{-\fr{b(0,0) t }{\eps}}  \erfc\left(   \fr{x}{2 \sqrt{t}}  \right) +y, \quad A_0:=g_L(0)-\Phi(o^+) .
+\end{equation}
+If one defines $ z_n := t^n  e^{-\fr{b(0,0) t }{\eps}}  \erfc\left(   \fr{x}{2 \sqrt{t}}  \right)$, one sees that $ z_0 $ solves the homogenous problem \eqref{parabolic}, if $ b $ is \enquote{frozen} at the point $ (0,0) $.
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.6\linewidth]{fig/z0}
+	\caption[Function $ z_0(x,t) $ on the domain]{Function $ z_0(x,t) $ on the domain $ [0, 2.5 \cdot 10^{-4}] \times  [0, 2.5 \cdot 10^{-4}]  $ }
+	\label{fig:z0}
+\end{figure}
+One main goal of this paper, is to establish  a priori bounds on the derivatives of the (now)
+continuous function $  y := u - A_0\cdot z_0 $. One can bluntly say, that the singularity has been \enquote{removed} from the seeked solution $ u $  in order to construct the function $ y $.
+Now, $ y $ is further being decomposed into a sum of a regular component
+$ v $ and several layer components $ w $:
+\begin{equation}\label{components}
+	y = v + w_L + w_R + w_I + w_{IB} .
+\end{equation}
+
+\section{Regularity of the components}
+\subsection{Regularity of $ v, w_L, w_R $}
+For the components defined in \eqref{components}, one has the following bounds for the  components $ v, w_L, w_R \in C^{4 +\gamma}(\overline{Q}) $ for all $ 0 \leq i+2j \leq 4 $ (\cite[Theorem~1]{Gracia.27.06.2018}):
+\begin{align}
+	\norm{\fr{\p^{i+j} v }{\p x^i \p t^j}} & \leq C (1 + \epsilon^{1-(i/2+j)}) \\
+	\abs{w_L(x,t)} & \leq C e^{-x \sqrt{\beta/\epsilon}}; \\
+		\abs{w_R(x,t)} & \leq C e^{-(1-x) \sqrt{\beta/\epsilon}} \\
+		\abs{\fr{\p^{i+j} w_L  }{\p x^i \p t^j}} &\leq C  \epsilon^{-(i/2+j)} e^{-x \sqrt{\beta/\epsilon}} \\
+				\abs{\fr{\p^{i+j} w_R  }{\p x^i \p t^j}} & \leq C  \epsilon^{-(i/2+j)} e^{-(1-x) \sqrt{\beta/\epsilon}} \\
+				\max \left\{   \norm{\fr{\p^{j} w_L }{ \p t^j}} ,  \norm{\fr{\p^{j} w_R }{ \p t^j}}  \right\} & \leq C \epsilon^{1-j}, \quad 1  \leq j \leq 2.
+\end{align}
+\subsection{Regularity of $ w_I $}
+Concerning the component $ w_I  \in  C^{4 +\gamma}(\overline{Q}) $, one has the bounds (see \cite[Theorem~2]{Gracia.27.06.2018})
+\begin{align*}
+		\abs{w_I(x,t)} & \leq C e^{-t \beta/\epsilon}, \quad (x,t) \in Q; \\
+		\abs{\fr{\p^{i+j} w_I  }{\p x^i \p t^j}} & \leq C  \epsilon^{-i/2-j}  e^{-t \beta/\epsilon}, 0 \leq i+2j \leq 4; \\
+				\abs{\fr{\p^{i} w_I  }{\p x^i }} & \leq C  (1 + \epsilon^{1-i/2})  e^{-t \beta/\epsilon}, i = 1, \dots, 4.
+\end{align*}
+
+\subsection{Regularity of $ w_{IB} $}
+The initial-boundary layer term is decomposed as
+\begin{equation}\label{wib}
+	W_{IB}(x,t) = A_1 z_1(x,t) + w_C(x,t)
+\end{equation}
+with $ z_1 := t \cdot  e^{-\fr{b(0,0) t }{\eps}}  \erfc\left(   \fr{x}{2 \sqrt{t}}  \right)$, and $ A_1 = O(\epsilon^{-1}) $. One has for $ z_1 $ 
+\begin{align}
+	\abs{\fr{\p^2 z_1}{\p x^2}(x,t)} + 	\abs{\fr{\p z_1}{\p t}(x,t)} & \leq C e^{-t \beta/\epsilon} ; \\
+		\abs{\fr{\p^3 z_1}{\p x^3}(x,t)}& \leq \fr{1}{\sqrt{t}} e^{-x^2/4t}  e^{-\fr{b(0,0) t }{\eps}}  ; \\
+			\abs{\fr{\p^4 z_1}{\p x^4}(x,t)} + \epsilon	\abs{\fr{\p^2 z_1}{\p t^2}(x,t)}& \leq C \fr{1}{t} (\epsilon + t) e^{-t \beta/\epsilon} ; \\
+			\abs{\fr{\p^4 z_1}{\p x^4}(x,t)} + \epsilon	\abs{\fr{\p^2 z_1}{\p t^2}(x,t)} &\leq  C e^{-t \beta/\epsilon} .
+\end{align}
+Finally, one has for the component $ W_C \in C^{2+\gamma} (\overline{Q})$ defined in \eqref{wib}
+for all $ (x,t) \in \overline{Q} $
+ \begin{align}
+ 	\abs{w_C(x,t)} & \leq C e^{-t \beta/\epsilon}; \\
+ 	\abs{\fr{\p^2 w_C}{\p x^2}(x,t)} + 	\abs{\fr{\p w_C}{\p t}(x,t)} & \leq C  + C \eps^{-1}  (e^{-\fr{\beta}{\eps} x}  + e^{-\fr{\beta}{\eps} (1-x)} + e^{-\fr{\beta}{\eps} t} ) ; \\
+ 	\abs{\fr{\p^4 z_1}{\p x^4}(x,t)} + \epsilon	\abs{\fr{\p^2 z_1}{\p t^2}(x,t)} & \leq C \eps^{-1}  + C  \eps^{-2} (e^{-\fr{\beta}{\eps} x}  + e^{-\fr{\beta}{\eps} (1-x)} + e^{-\fr{\beta}{\eps} t} ) .
+  \end{align}
+%	\printbibliography %hier Bibliographie ausgeben lassen
+
+      
       </div>
     
     
-   
+  
 
   </div>
   
