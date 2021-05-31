@@ -1,134 +1,105 @@
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title></title>
+<html>
+	<head>   
+	<style>   
+	img {
+  width:100%;
+  height:auto;
+}
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+@media screen and (min-width:28em) {
+  img {
+    width:50%;
+  }
+}
 
-</head>
-
+@media screen and (min-width:50em) {
+  img {
+    width:33%;
+  }
+}
+	
+	</style>
+		</head>
+<title>Notes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-
-body {
-
-	background-image: url('grunge_patterns.jpg');
-	background-attachment: fixed;
-	color: #333;
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
 }
-
-.box {
-	border-radius: 3px;
-	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
-}
-
-.lightbox {
-	zoom: 1.5;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(10, 10, 10, 0.8);
-	text-align: center;
-	margin: auto;
-
-}
-
-div.horizontal {
-	display: flex;
-	justify-content: center;
-	height: 100%;
-}
-
-div.vertical {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-}
-
-::-webkit-input-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-::-moz-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-:-ms-input-placeholder {
-   color: #955;
-   text-align: center;
-}
-
 </style>
-
 <body>
-
-	<div id="loginbox" class="lightbox" >
-		<div class="horizontal">
-			<div class="vertical">
-				<div class="box">
-					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
-					<p id="wrongPassword" style="display: none">wrong password</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-
-
-	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
-
-	<script type="text/javascript">
-	"use strict";
-
-
-	function loadPage(pwd) {
-
-		var hash= pwd;
-		hash= Sha1.hash(pwd);
-		var url= hash + "/index.html";
-
-		$.ajax({
-			url : url,
-			dataType : "html",
-			success : function(data) {
-
-				window.location= url;
-
-			},
-			error : function(xhr, ajaxOptions, thrownError) {
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
+>
+</script>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Notes</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+    </div>
+  </div>
+</div>
 
 
-				parent.location.hash= hash;
 
-				//$("#wrongPassword").show();
-				$("#password").attr("placeholder","wrong password");
-				$("#password").val("");
-			}
-		});
-	}
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
 
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    
+    
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Singularly perturbed problems</h1><br>
+      <h5 class="w3-center">What is it about?</h5>
+	 Even simple examples of various one-dimensional
+	problems involving singular perturbations cannot be solved numerically; anyway not in a completely satisfactory manner. This leads to the necessity for methods that behave uniformly well, whatever the value of the singular perturbation parameter may be. Such methods are called $ \epsilon $-uniform methods, $ \epsilon $  being the singular perturbation parameter. 
+ It is a known fact, that numerical methods for computing approximate solutions of partial differential equations are usually applied to problems with unknown exact solution. Now, $ u $ shall be the exact solution of any given problem, $ U^N  $ shall be a numerical approximation on the mesh $ \Omega^N $, $ N $ being the number of mesh points in each coordinate direction of the discrete problem associated with the numerical
+method. The canonic criterion for judging the quality of a numerical method for solving problems in the case of non-singularly perturbed
+problems is an error estimate of the following form: there exist positive constants $ N_0, C = C(N_0) \text{ and } p = p(N_0) $, all independent of $ N $ , such that for all $ N > N_0 $ one has the inequality 
+$$	\|U^N - u \|_{\Omega^N} \leq C N^{-p} $$
+  </p>
+   <p>Here are some <a href="excerpts.html">excerpts</a>.</p>
+  
+      </div>
+    
+  </div>
+  
+ 
+ 
+  
+<!-- End page content -->
+</div>
 
-	$("#loginbutton").on("click", function() {
-		loadPage($("#password").val());
-	});
-	$("#password").keypress(function(e) {
-		if (e.which == 13) {
-
-			loadPage($("#password").val());
-		}
-	});
-	$("#password").focus();
-
-	</script>
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
 
 </body>
 </html>
